@@ -1,15 +1,20 @@
 import React, {Fragment, useState} from 'react'
 
-const useMoneda = () => {
+const useMoneda = (label,stateInicial,opciones) => {
     //sTATE DE NUESTRO CUSTOM HOOK
-    const [state,actualizarState]=useState('');
+    const [state,actualizarState]=useState(stateInicial);
 
     //Lo que se muestra en pantalla
     const Seleccionar = () => (
         <Fragment>
-            <label>Moneda</label>
+            <label>{label}</label>
             <select>
-                <option value="MXN">Peso Mexicano</option>
+                <option value="">--SELECIONE--</option>
+                {opciones.map(opcion => (
+                    <option key={opcion.codigo} value={opcion.codigo}>
+                        {opcion.nombre}
+                    </option>
+                ))}
             </select>
         </Fragment>
     )
