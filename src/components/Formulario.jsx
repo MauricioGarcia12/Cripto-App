@@ -79,7 +79,6 @@ const Formulario = ({guardarCriptomoneda,guardarMoneda}) => {
 
             <SelectMonedas/>
             <SelectCripto
-                key={listaCripto}
             />
             <Boton
                 type='submit'
