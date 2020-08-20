@@ -56,7 +56,7 @@ const Formulario = () => {
         <form>
 
             <SelectMonedas/>
-            <SelectMonedas/>
+            <SelectCripto/>
             <Boton
                 type='submit'
                 value='Calcular'
